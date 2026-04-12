@@ -7,6 +7,10 @@
         text-align: center;
     }
 
+    .Bigger {
+        font-size: $text-xl;
+    }
+
     .AgendaDays {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -32,15 +36,19 @@
 
                 li {
                     display: grid;
-                    grid-template-columns: 1fr 1fr;
+                    grid-template-columns: 1fr 2fr;
                     align-items: center;
                     justify-items: center;
                     column-gap: $spacing-m;
+
+                    padding: 0.25rem 0;
 
                     max-width: 300px;
                     width: 100%;
 
                     span {
+                        width: 100%;
+
                         &:first-of-type {
                             white-space: nowrap;
                         }
@@ -103,6 +111,18 @@
                     }
                 }
             }
+        }
+    }
+}
+
+// --- Mobile ---
+@media only screen and (max-width: $bp-mobile) {
+    .TextSection {
+        .AgendaDays {
+            grid-template-columns: 1fr;
+            row-gap: $spacing-m;
+
+            margin-top: $spacing-m;
         }
     }
 }

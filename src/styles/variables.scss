@@ -5,6 +5,10 @@ $c-secondary: #22361c;
 //  --- Font ---
 $text-m: 20px;
 $text-l: 24px;
+$text-xl: 32px;
+
+$font-main: var(--font-sans);
+$font-secondary: var(--font-serif);
 
 //  --- Spacing & Sizes ---
 $section-padding: 140px;
@@ -14,3 +18,6 @@ $section-width: 500px;
 
 $spacing-s: 1rem;
 $spacing-m: 2rem;
+
+//  --- Breakpoints ---
+$bp-mobile: 768px;

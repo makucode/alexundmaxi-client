@@ -7,7 +7,7 @@ export const homeAgenda: TextSectionData = {
         {
             title: "Trauung",
             paragraphs: [
-                "Der Platz während der standesamtlichen Trauung am 08.10.2026 ist begrenzt, daher findet diese nur im engsten Kreis statt.\n\n Falls ihr aber unbedingt dabei sein möchtet, könnt ihr gerne zu einem kleinen Sektempfang nach der Trauung im Schloss von Hammerstein vorbeischauen.",
+                "Der Platz während der standesamtlichen Trauung am 08.10.2026 ist leider begrenzt, daher findet diese nur im engsten Kreis statt.\n\n Falls ihr aber trotzdem unbedingt dabei sein möchtet, könnt ihr gerne zu einem kleinen Sektempfang nach der Trauung im Schloss von Hammerstein vorbeischauen.",
                 "",
             ],
             items: [
@@ -19,18 +19,24 @@ export const homeAgenda: TextSectionData = {
         },
         {
             title: "Hochzeitsfeier",
-            paragraphs: ["Der Ablaufplan ist folgendermaßen..."],
+            paragraphs: [
+                "Die Hochzeitsfeier findet am 10.10.2026 statt und startet in der Lukaskirche in der List.",
+            ],
             items: [
                 {
-                    time: "11 00 Uhr",
+                    time: "13 00 Uhr",
                     label: "Trauung in der Lukaskirche Hannover",
                 },
-                { time: "12 00 Uhr", label: "Ereignis 1" },
-                { time: "13 30 Uhr", label: "Ereignis 2" },
-                { time: "14 30 Uhr", label: "Ereignis 3" },
-                { time: "16 00 Uhr", label: "Anschnitt der Hochzeitstorte" },
-                { time: "18 00 Uhr", label: "Ereignis 5" },
-                { time: "20 00 Uhr", label: "Ereignis 5" },
+                {
+                    time: "16 00 Uhr",
+                    label: "Empfang im Schloss von Hammerstein",
+                },
+                {
+                    time: "17 00 Uhr",
+                    label: "Anschnitt der Hochzeitstorte",
+                },
+                { time: "18 00 Uhr", label: "Abendessen" },
+                { time: "20 00 Uhr", label: "Umzug in den Gartensaal" },
             ],
         },
     ],
@@ -81,6 +87,10 @@ export const homeAnfahrt: TextSectionData = {
     ],
     links: [
         {
+            title: "Link zur Whatsapp-Gruppe",
+            href: "https://maps.app.goo.gl/",
+        },
+        {
             title: "Schloss von Hammerstein\nGroßer Winkel 17, 31552 Apelern",
             href: "https://maps.app.goo.gl/GRtcKsoHoTeKWedF6",
         },
@@ -95,11 +105,11 @@ export const homeUnterkunft: TextSectionData = {
     id: "hochzeit-unterkunft",
     title: "Unterkunft",
     paragraphs: [
-        "Falls ihr in der Nähe übernachten möchtet, haben wir hier ein paar Hotels aufgelistet. Es gibt aber natürlich noch viele weitere Möglichkeiten in der Umgebung.",
+        "Falls ihr in der Nähe übernachten möchtet, haben wir hier ein paar Hotels für euch aufgelistet.",
     ],
     links: [
-        { title: "Hotel 1", href: "https://google.com" },
-        { title: "Hotel 2", href: "https://google.com" },
+        { title: "Hotel 1", href: "https://google.com/hotel1" },
+        { title: "Hotel 2", href: "https://google.com/hotel2" },
     ],
 };
 
@@ -107,7 +117,7 @@ export const homeDresscode: TextSectionData = {
     id: "hochzeit-dresscode",
     title: "Dresscode",
     paragraphs: [
-        "Uns ist wichtig, dass ihr euch wohlfühlt. Es gibt keinen richtigen Dresscode, wir wollen euch einfach gerne dabei haben!",
+        "Einen Dresscode gibt es nicht, wir wünschen uns vor allem, dass ihr euch wohlfühlt!",
     ],
 };
 

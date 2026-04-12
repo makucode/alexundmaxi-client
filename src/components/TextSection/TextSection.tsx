@@ -1,16 +1,52 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import Link from "next/link";
-
 import Section from "../Section/Section";
-
 import { TextSectionData } from "@/types/content";
 
 import styles from "./TextSection.module.scss";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const TextSection = ({ content }: { content: TextSectionData }) => {
+    const sectionRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            const elements =
+                sectionRef.current?.querySelectorAll(`h2, p, h3, li`);
+
+            if (!elements) return;
+
+            gsap.from(elements, {
+                opacity: 0,
+                y: 10,
+                filter: "blur(3px)",
+                scale: 0.995,
+                duration: 0.8,
+                ease: "power2.out",
+                stagger: 0.1,
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top 90%",
+                    toggleActions: "play none none reset",
+                },
+            });
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
         <Section id={content.id}>
-            <div className={styles.TextSection}>
-                <h2>{content.title}</h2>
+            <div ref={sectionRef} className={styles.TextSection}>
+                <h2 className={`${content.items ? styles.Bigger : ""}`}>
+                    {content.title}
+                </h2>
 
                 {content.paragraphs && (
                     <div className={styles.Paragraphs}>
