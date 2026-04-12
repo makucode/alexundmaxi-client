@@ -1,0 +1,12 @@
+.Section {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    .Content {
+        width: fit-content;
+
+        padding: $section-padding $lr-padding;
+    }
+}

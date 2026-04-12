@@ -1,0 +1,108 @@
+.TextSection {
+    display: flex;
+    flex-direction: column;
+    row-gap: $spacing-s;
+
+    h2 {
+        text-align: center;
+    }
+
+    .AgendaDays {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: $section-padding;
+
+        margin-top: $spacing-m;
+
+        .Day {
+            h3 {
+                text-align: center;
+
+                margin-bottom: $spacing-s;
+            }
+
+            .Text {
+                margin-bottom: $spacing-m;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                li {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    align-items: center;
+                    justify-items: center;
+                    column-gap: $spacing-m;
+
+                    max-width: 300px;
+                    width: 100%;
+
+                    span {
+                        &:first-of-type {
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: $spacing-s;
+
+        li {
+            width: fit-content;
+
+            text-align: center;
+
+            a {
+                width: fit-content;
+
+                text-align: center;
+                white-space: pre-wrap;
+
+                &::after {
+                    content: "";
+
+                    display: block;
+
+                    width: 0;
+
+                    margin-top: -2px;
+                    margin-left: auto;
+
+                    background-color: $c-secondary;
+                    border-bottom: 1px solid $c-secondary;
+
+                    transition: all 0.3s;
+
+                    width: 100%;
+                    margin-left: 0;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (hover) {
+    .TextSection {
+        .Links {
+            li {
+                a {
+                    &:hover::after {
+                        width: 0;
+                        margin-left: auto;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

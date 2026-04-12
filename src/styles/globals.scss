@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+
+    padding: 0;
+    margin: 0;
+
+    scrollbar-width: thin;
+    scrollbar-color: $c-secondary $c-main;
+
+    overscroll-behavior: none;
+
+    font-size: $text-m;
+    color: $c-secondary;
+}
+
+body {
+    background-color: $c-main;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: $text-l;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    max-width: $section-width;
+
+    white-space: pre-wrap;
+    text-align: center;
+}
+
+ul,
+li {
+    list-style: none;
+}
