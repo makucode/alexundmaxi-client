@@ -17,24 +17,33 @@ const TextSection = ({ content }: { content: TextSectionData }) => {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            const elements =
-                sectionRef.current?.querySelectorAll(`h2, p, h3, li`);
+            const elements = gsap.utils.toArray<HTMLElement>(
+                sectionRef.current?.querySelectorAll("h2, p, h3, li") || [],
+            );
 
-            if (!elements) return;
-
-            gsap.from(elements, {
-                opacity: 0,
-                y: 10,
-                filter: "blur(3px)",
-                scale: 0.995,
-                duration: 0.8,
-                ease: "power2.out",
-                stagger: 0.1,
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: "top 90%",
-                    toggleActions: "play none none reset",
-                },
+            elements.forEach((el) => {
+                gsap.fromTo(
+                    el,
+                    {
+                        opacity: 0,
+                        y: 10,
+                        filter: "blur(3px)",
+                        scale: 0.995,
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        filter: "blur(0px)",
+                        scale: 1,
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: el, // 🔥 jetzt pro Element!
+                            start: "top 95%",
+                            end: "top 80%",
+                            scrub: true,
+                        },
+                    },
+                );
             });
         }, sectionRef);
 
