@@ -38,8 +38,8 @@ const TextSection = ({ content }: { content: TextSectionData }) => {
                         ease: "none",
                         scrollTrigger: {
                             trigger: el, // 🔥 jetzt pro Element!
-                            start: "top 95%",
-                            end: "top 80%",
+                            start: "top 90%",
+                            end: "top 75%",
                             scrub: true,
                         },
                     },

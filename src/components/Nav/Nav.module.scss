@@ -1,0 +1,34 @@
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+
+    z-index: 1000;
+
+    .Nav {
+        padding: $lr-padding;
+
+        ul {
+            display: flex;
+            column-gap: 20px;
+
+            padding: $spacing-s $spacing-m;
+
+            backdrop-filter: blur(10px);
+
+            border-radius: 10px;
+
+            li a {
+                color: $c-secondary;
+                font-family: $font-secondary;
+                font-size: $text-l;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

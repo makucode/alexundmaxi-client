@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import { sansRegular, serifThin } from "@/fonts";
 
+import Nav from "@/components/Nav/Nav";
+
 import "@/styles/globals.scss";
 
 export const metadata: Metadata = {
@@ -19,7 +21,10 @@ export default function RootLayout({
             lang="de"
             className={`${sansRegular.variable} ${serifThin.variable}`}
         >
-            <body>{children}</body>
+            <body>
+                <Nav />
+                {children}
+            </body>
         </html>
     );
 }
