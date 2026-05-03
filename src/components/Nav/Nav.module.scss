@@ -1,9 +1,9 @@
 .Header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    position: absolute;
+    bottom: $spacing-m;
+    left: 50%;
+
+    transform: translateX(-50%);
 
     display: flex;
     justify-content: center;
@@ -19,14 +19,12 @@
 
             padding: $spacing-s $spacing-m;
 
-            backdrop-filter: blur(10px);
-
             border-radius: 10px;
 
             li a {
-                color: $c-secondary;
+                color: $c-main;
                 font-family: $font-secondary;
-                font-size: $text-l;
+                font-size: $text-xl;
                 text-transform: uppercase;
             }
         }
