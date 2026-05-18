@@ -72,7 +72,12 @@ const TextSection = ({ content }: { content: TextSectionData }) => {
                                 <h3>{day.title}</h3>
                                 <div className={styles.Text}>
                                     {day.paragraphs.map((p, i) => (
-                                        <p key={i}>{p}</p>
+                                        <p
+                                            key={i}
+                                            dangerouslySetInnerHTML={{
+                                                __html: p,
+                                            }}
+                                        ></p>
                                     ))}
                                 </div>
                                 <ul className={styles.Times}>

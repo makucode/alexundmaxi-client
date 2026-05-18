@@ -62,12 +62,12 @@ const Nav = () => {
                     </li>
                     <li>
                         <Link
-                            href="#hochzeit-geschenkeliste"
+                            href="#hochzeit-geschenke"
                             onClick={(e) =>
-                                handleClick(e, "#hochzeit-geschenkeliste")
+                                handleClick(e, "#hochzeit-geschenke")
                             }
                         >
-                            Geschenkeliste
+                            Geschenke
                         </Link>
                     </li>
                     <li>

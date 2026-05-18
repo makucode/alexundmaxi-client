@@ -7,12 +7,12 @@ export const homeAgenda: TextSectionData = {
         {
             title: "Trauung",
             paragraphs: [
-                "Der Platz während der standesamtlichen Trauung am 08.10.2026 ist leider begrenzt, daher findet diese nur im engsten Kreis statt.\n\n Falls ihr aber trotzdem unbedingt dabei sein möchtet, könnt ihr gerne zu einem kleinen Sektempfang nach der Trauung im Schloss von Hammerstein vorbeischauen.",
+                "Der Platz während der standesamtlichen Trauung am <br />08. Oktober 2026 ist leider begrenzt, daher findet diese nur im engsten Kreis statt.\n\n Falls ihr aber trotzdem unbedingt dabei sein möchtet, könnt ihr gerne zu einem kleinen Sektempfang nach der Trauung im Schloss von Hammerstein vorbeischauen.",
                 "",
             ],
             items: [
                 {
-                    time: "18 00 Uhr",
+                    time: "16 30 Uhr",
                     label: "Sektempfang im Schloss von Hammerstein",
                 },
             ],
@@ -20,7 +20,7 @@ export const homeAgenda: TextSectionData = {
         {
             title: "Hochzeitsfeier",
             paragraphs: [
-                "Die Hochzeitsfeier findet am 10.10.2026 statt und startet in der Lukaskirche in der List.",
+                "Die Hochzeitsfeier findet am 10. Oktober 2026 statt und startet in der Lukaskirche in der List.",
             ],
             items: [
                 {
@@ -28,15 +28,12 @@ export const homeAgenda: TextSectionData = {
                     label: "Trauung in der Lukaskirche Hannover",
                 },
                 {
-                    time: "16 00 Uhr",
+                    time: "15 00 Uhr",
                     label: "Empfang im Schloss von Hammerstein",
                 },
-                {
-                    time: "17 00 Uhr",
-                    label: "Anschnitt der Hochzeitstorte",
-                },
-                { time: "18 00 Uhr", label: "Abendessen" },
-                { time: "20 00 Uhr", label: "Umzug in den Gartensaal" },
+                { time: "18 30 Uhr", label: "Abendessen" },
+                { time: "20 00 Uhr", label: "Beginn der Party" },
+                { time: "24 00 Uhr", label: "Mitternachtssnack" },
             ],
         },
     ],
@@ -117,13 +114,16 @@ export const homeDresscode: TextSectionData = {
     id: "hochzeit-dresscode",
     title: "Dresscode",
     paragraphs: [
-        "Einen Dresscode gibt es nicht, wir wünschen uns vor allem, dass ihr euch wohlfühlt!",
+        "Einen richtigen Dresscode gibt es nicht. Zieht an, worin ihr euch wohlfühlt und was euch festlich genug für eine Hochzeit erscheint!",
     ],
 };
 
 export const homeGeschenkeliste: TextSectionData = {
-    id: "hochzeit-geschenkeliste",
-    title: "Geschenkeliste",
+    id: "hochzeit-geschenke",
+    title: "Geschenke",
+    paragraphs: [
+        "Wir freuen uns sehr über eine kleine Spende, da eine Hochzeit mit allem drum & dran ganz schön teuer ist. Falls ihr aber eine andere schöne Idee habt, freuen wir uns darüber natürlich auch.",
+    ],
 };
 
 export const homeFragen: TextSectionData = {
