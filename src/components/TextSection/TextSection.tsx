@@ -26,9 +26,9 @@ const TextSection = ({ content }: { content: TextSectionData }) => {
                     el,
                     {
                         opacity: 0,
-                        y: 10,
+                        y: 18,
                         filter: "blur(3px)",
-                        scale: 0.995,
+                        scale: 0.99,
                     },
                     {
                         opacity: 1,
@@ -38,8 +38,8 @@ const TextSection = ({ content }: { content: TextSectionData }) => {
                         ease: "none",
                         scrollTrigger: {
                             trigger: el, // 🔥 jetzt pro Element!
-                            start: "top 90%",
-                            end: "top 75%",
+                            start: "top 100%",
+                            end: "top 85%",
                             scrub: true,
                         },
                     },

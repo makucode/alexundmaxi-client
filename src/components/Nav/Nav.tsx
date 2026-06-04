@@ -1,10 +1,25 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 import styles from "./Nav.module.scss";
 
 const Nav = () => {
+    const headerRef = useRef<HTMLElement>(null);
+    const [hidden, setHidden] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!headerRef.current) return;
+            const rect = headerRef.current.getBoundingClientRect();
+            setHidden(rect.top < window.innerHeight * 0.25);
+        };
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     const handleClick = (
         e: React.MouseEvent<HTMLAnchorElement>,
         id: string,
@@ -21,7 +36,7 @@ const Nav = () => {
     };
 
     return (
-        <header className={styles.Header}>
+        <header ref={headerRef} className={`${styles.Header} ${hidden ? styles.hidden : ""}`}>
             <nav className={styles.Nav}>
                 <ul>
                     <li>
