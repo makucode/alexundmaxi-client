@@ -24,7 +24,7 @@ const TextSection = ({
     useEffect(() => {
         const ctx = gsap.context(() => {
             const elements = gsap.utils.toArray<HTMLElement>(
-                sectionRef.current?.querySelectorAll("h2, p, h3, li") || [],
+                sectionRef.current?.querySelectorAll("h2, p, h3, li, a") || [],
             );
 
             elements.forEach((el) => {
@@ -63,11 +63,22 @@ const TextSection = ({
                     {content.title}
                 </h2>
 
-                {content.paragraphs && (
-                    <div className={styles.Paragraphs}>
-                        {content.paragraphs.map((p, i) => (
-                            <p key={i}>{p}</p>
-                        ))}
+                {content.blocks && (
+                    <div className={styles.Blocks}>
+                        {content.blocks.map((block, i) =>
+                            "href" in block ? (
+                                <Link
+                                    key={i}
+                                    className={styles.Link}
+                                    href={block.href}
+                                    target="_blank"
+                                >
+                                    {block.text}
+                                </Link>
+                            ) : (
+                                <p key={i}>{block.text}</p>
+                            ),
+                        )}
                     </div>
                 )}
 
@@ -97,18 +108,6 @@ const TextSection = ({
                             </div>
                         ))}
                     </div>
-                )}
-
-                {content.links && (
-                    <ul className={styles.Links}>
-                        {content.links.map((link) => (
-                            <li key={link.href}>
-                                <Link href={link.href} target="_blank">
-                                    {link.title}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
                 )}
             </div>
         </Section>

@@ -25,6 +25,19 @@
         padding: 0 $lr-padding;
 
         z-index: 2;
+
+        svg {
+            animation: heroLogoFadeIn 1.8s ease both;
+        }
+    }
+
+    @keyframes heroLogoFadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
 
     .Image {

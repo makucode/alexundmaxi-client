@@ -1,7 +1,4 @@
-export type TextLink = {
-    title: string;
-    href: string;
-};
+export type TextBlock = { text: string } | { text: string; href: string };
 
 export type TextItem = {
     time: string;
@@ -17,9 +14,8 @@ export type TextSectionBlock = {
 export type TextSectionData = {
     id: string;
     title: string;
-    paragraphs?: string[];
+    blocks?: TextBlock[];
     items?: TextSectionBlock[];
-    links?: TextLink[];
 };
 
 export type ImageSectionData = {
