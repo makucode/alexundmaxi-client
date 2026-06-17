@@ -54,9 +54,9 @@ const Hero = () => {
                 <Image
                     src={"/images/alexundmaxi-6.jpg"}
                     alt="Foto vom Garten von Schloss von Hammerstein"
-                    width={1512}
-                    height={982}
-                    sizes="100vw"
+                    fill
+                    sizes="(orientation: portrait) 400vw, 100vw"
+                    priority
                 />
             </div>
         </section>

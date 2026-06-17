@@ -41,7 +41,7 @@ const ImageSection = ({ content }: { content: ImageSectionData }) => {
                     src={content.images[0].src}
                     alt={content.images[0].alt}
                     fill
-                    sizes="100vw"
+                    sizes="(orientation: portrait) 250vw, 100vw"
                 />
             </div>
         </section>
