@@ -40,8 +40,7 @@ const ImageSection = ({ content }: { content: ImageSectionData }) => {
                 <Image
                     src={content.images[0].src}
                     alt={content.images[0].alt}
-                    width={1920}
-                    height={1920}
+                    fill
                     sizes="100vw"
                 />
             </div>

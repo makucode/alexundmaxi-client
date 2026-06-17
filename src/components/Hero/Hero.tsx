@@ -52,7 +52,7 @@ const Hero = () => {
 
             <div ref={imageRef} className={styles.Image}>
                 <Image
-                    src={"/images/hero.png"}
+                    src={"/images/alexundmaxi-6.jpg"}
                     alt="Foto vom Garten von Schloss von Hammerstein"
                     width={1512}
                     height={982}

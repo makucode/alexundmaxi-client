@@ -120,7 +120,7 @@
     .TextSection {
         .AgendaDays {
             grid-template-columns: 1fr;
-            row-gap: $spacing-m;
+            row-gap: calc($spacing-m);
 
             margin-top: $spacing-m;
         }

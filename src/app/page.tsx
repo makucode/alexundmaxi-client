@@ -9,6 +9,7 @@ import {
     homeGeschenkeliste,
     homeImages1,
     homeImages2,
+    homeImages3,
     homeUnterkunft,
 } from "@/content/home";
 
@@ -23,11 +24,12 @@ export default function Home() {
                 <TextSection content={homeAgenda} />
                 <ImageSection content={homeImages1} />
                 <TextSection content={homeAnfahrt} />
-                <TextSection content={homeUnterkunft} />
-                <TextSection content={homeDresscode} />
-                <TextSection content={homeGeschenkeliste} />
-                <TextSection content={homeFragen} />
+                <TextSection content={homeUnterkunft} noPaddingTop />
                 <ImageSection content={homeImages2} />
+                <TextSection content={homeDresscode} />
+                <TextSection content={homeGeschenkeliste} noPaddingTop />
+                <TextSection content={homeFragen} noPaddingTop />
+                <ImageSection content={homeImages3} />
             </main>
         </div>
     );

@@ -73,14 +73,24 @@ export const homeAgendaFull: TextSectionData = {
 
 export const homeImages1: ImageSectionData = {
     id: "hochzeit-bilder-1",
-    images: [{ src: "/images/images-1-1.png", alt: "Bild 1" }],
+    images: [{ src: "/images/alexundmaxi-5.jpg", alt: "Bild 1" }],
+};
+export const homeImages2: ImageSectionData = {
+    id: "hochzeit-bilder-2",
+    images: [{ src: "/images/alexundmaxi-3.jpg", alt: "Bild 2" }],
+};
+
+export const homeImages3: ImageSectionData = {
+    id: "hochzeit-bilder-3",
+    images: [{ src: "/images/alexundmaxi-4.jpg", alt: "Bild 2" }],
 };
 
 export const homeAnfahrt: TextSectionData = {
     id: "hochzeit-anfahrt",
     title: "Anfahrt",
     paragraphs: [
-        "Damit ihr nicht in 65 separaten Autos anreisen müsst, gibt es eine Whatsapp-Gruppe für die Organisation von Mitfahrgelegenheiten.",
+        "Damit ihr nicht in 65 separaten Autos anreisen müsst, gibt es eine Whatsapp-Gruppe für die Organisation von Mitfahrgelegenheiten.\n\nDer Parkplatz des Schlosses befindet sich gegenüber von Hauptstraße 29, 31552 Apelern.",
+        "",
     ],
     links: [
         {
@@ -88,12 +98,16 @@ export const homeAnfahrt: TextSectionData = {
             href: "https://maps.app.goo.gl/",
         },
         {
-            title: "Schloss von Hammerstein\nGroßer Winkel 17, 31552 Apelern",
-            href: "https://maps.app.goo.gl/GRtcKsoHoTeKWedF6",
+            title: "Einfahrt zum Parkplatz",
+            href: "https://maps.app.goo.gl/rj8XnrYLjgdwzvqT8",
         },
         {
             title: "Lukaskirche Hannover\nDessauerstraße 2, 30161 Hannover",
             href: "https://maps.app.goo.gl/gwPNhUHKTY34FCqK8",
+        },
+        {
+            title: "Schloss von Hammerstein\nGroßer Winkel 17, 31552 Apelern",
+            href: "https://maps.app.goo.gl/GRtcKsoHoTeKWedF6",
         },
     ],
 };
@@ -105,8 +119,18 @@ export const homeUnterkunft: TextSectionData = {
         "Falls ihr in der Nähe übernachten möchtet, haben wir hier ein paar Hotels für euch aufgelistet.",
     ],
     links: [
-        { title: "Hotel 1", href: "https://google.com/hotel1" },
-        { title: "Hotel 2", href: "https://google.com/hotel2" },
+        {
+            title: "Sporthotel Fuchsbachtal",
+            href: "https://sporthotel-fuchsbachtal.de/",
+        },
+        {
+            title: "Hotel Schaumburg Ritter",
+            href: "https://schaumburger-ritter.de/",
+        },
+        {
+            title: "Schmiedegasthaus Gehrke",
+            href: "https://www.schmiedegasthaus.de/",
+        },
     ],
 };
 
@@ -133,9 +157,4 @@ export const homeFragen: TextSectionData = {
         "Bei weiteren Fragen, falls ihr eine Rede halten oder eine Überraschung organisieren möchtet, könnt ihr euch gerne an Maxis Trautzeugin Judith wenden.",
     ],
     links: [{ title: "0157 3203 7961", href: "tel:+4915732037961" }],
-};
-
-export const homeImages2: ImageSectionData = {
-    id: "hochzeit-bilder-2",
-    images: [{ src: "/images/images-2-1.png", alt: "Bild 2" }],
 };

@@ -8,5 +8,9 @@
         width: fit-content;
 
         padding: $section-padding $lr-padding;
+
+        &.NoPaddingTop {
+            padding-top: 0;
+        }
     }
 }

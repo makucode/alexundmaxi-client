@@ -12,7 +12,13 @@ import styles from "./TextSection.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const TextSection = ({ content }: { content: TextSectionData }) => {
+const TextSection = ({
+    content,
+    noPaddingTop = false,
+}: {
+    content: TextSectionData;
+    noPaddingTop?: boolean;
+}) => {
     const sectionRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -51,7 +57,7 @@ const TextSection = ({ content }: { content: TextSectionData }) => {
     }, []);
 
     return (
-        <Section id={content.id}>
+        <Section id={content.id} noPaddingTop={noPaddingTop}>
             <div ref={sectionRef} className={styles.TextSection}>
                 <h2 className={`${content.items ? styles.Bigger : ""}`}>
                     {content.title}
