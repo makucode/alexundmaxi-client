@@ -153,7 +153,7 @@ export const homeGeschenkeliste: TextSectionData = {
     title: "Geschenke",
     blocks: [
         {
-            text: "Wir freuen uns sehr über eine kleine Spende, da eine Hochzeit mit allem drum & dran ganz schön teuer ist. Falls ihr aber eine andere schöne Idee habt, freuen wir uns darüber natürlich auch.",
+            text: "Einige von euch haben bestimmt schon tolle Ideen, also überrascht uns gerne! Ansonsten freuen wir uns sehr über eine kleine Spende, da eine Hochzeit mit allem drum & dran ganz schön teuer ist. Fühlt euch aber zu nichts verpflichtet. Dass ihr mit uns zusammen unsere Hochzeit feiern möchtet, reicht uns völlig.",
         },
     ],
 };
@@ -163,7 +163,7 @@ export const homeFragen: TextSectionData = {
     title: "Fragen",
     blocks: [
         {
-            text: "Bei weiteren Fragen, falls ihr eine Rede halten oder eine Überraschung organisieren möchtet, könnt ihr euch gerne an Maxis Trautzeugin Judith wenden.",
+            text: "Bei weiteren Fragen, falls ihr eine Rede halten oder eine Überraschung organisieren möchtet, könnt ihr euch gerne an Maxis Trauzeugin Judith wenden.",
         },
         { text: "0157 3203 7961", href: "tel:+4915732037961" },
     ],
