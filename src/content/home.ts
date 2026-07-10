@@ -94,7 +94,7 @@ export const homeAnfahrt: TextSectionData = {
         },
         {
             text: "Link zur Whatsapp-Gruppe",
-            href: "https://maps.app.goo.gl/",
+            href: "https://chat.whatsapp.com/GlIAKdCQ2vXEPZBh5eiLGM?s=cl&p=i&ilr=0&amv=0",
         },
         { text: "" },
         {
